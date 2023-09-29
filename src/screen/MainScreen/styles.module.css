@@ -1,0 +1,6 @@
+
+/* main container styling */
+.main-container {
+    display: flex;
+    justify-content:space-between
+}

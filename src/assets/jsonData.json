@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "computer",
+        "price": "130",
+        "category": "computers",
+        "description": "PC, Laptop, palmtop,…",
+        "image": "https://cdn.ttgtmedia.com/rms/onlineimages/hp_elitebook_mobile.jpg"
+    },
+    {
+        "id": 2,
+        "name": "sweater",
+        "price": "1",
+        "category": "Clothing",
+        "description": "fashion, clothes , sweater, wool, cardigan,…",
+        "image": "https://img.tatacliq.com/images/i8/437Wx649H/MP000000014930319_437Wx649H_202210200606231.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "tie",
+        "price": "46",
+        "category": "Clothing",
+        "description": "fashion, tie, clothes, accessory , accessoire,…",
+        "image": "https://img.freepik.com/premium-vector/tie-illustrations-set-transparent-background_579979-195.jpg"
+    },
+    {
+        "id": 4,
+        "name": "jacket",
+        "price": "190",
+        "category": "Clothing",
+        "description": "winter jacket looks cool but warms you well,…",
+        "image": "https://www.kosha.co/journal/wp-content/uploads/2022/07/winter-jacket-for-men.jpeg"
+    },
+    {
+        "id": 5,
+        "name": "apple",
+        "price": "100",
+        "category": "food",
+        "description": "apple, orange, pineapple,…",
+        "image": "https://t4.ftcdn.net/jpg/02/52/93/81/360_F_252938192_JQQL8VoqyQVwVB98oRnZl83epseTVaHe.jpg"
+    },
+    {
+        "id": 6,
+        "name": "orange",
+        "price": "190",
+        "category": "food",
+        "description": "apple, orange, pineapple,…",
+        "image": "https://media.istockphoto.com/id/185284489/photo/orange.jpg?s=612x612&w=0&k=20&c=m4EXknC74i2aYWCbjxbzZ6EtRaJkdSJNtekh4m1PspE="
+    },
+    {
+        "id": 7,
+        "name": "jeans",
+        "price": "120",
+        "category": "Clothing",
+        "description": "joggers, pant, dhoti,…",
+        "image": "https://images.asos-media.com/products/asos-design-dad-jeans-in-mittelblau/204078994-1-midblue?$n_480w$&wid=476&fit=constrain"
+    }
+]

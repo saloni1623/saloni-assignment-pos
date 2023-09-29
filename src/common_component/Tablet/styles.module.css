@@ -1,0 +1,49 @@
+.tablet-container {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    position: relative;
+    border-radius: 10px;
+    margin-top: 20px
+}
+
+.tablet-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.image-style {
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.tablet-item-box {
+    position: absolute;
+    top: 20px;
+    z-index: 2;
+}
+
+.tablet-text {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center
+}
+
+.tablet-sub-text {
+    color: #fff;
+    font-size:small;
+    margin-top:10px;
+    margin-left:15px
+}

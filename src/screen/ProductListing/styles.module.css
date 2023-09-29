@@ -1,0 +1,12 @@
+.prod-list-container {
+    height: 100vh;
+    width: 58%;
+    background-color: #eeeff1;
+    padding: 10px
+}
+
+.prod-list-row {
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+}
