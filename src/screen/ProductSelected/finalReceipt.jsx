@@ -16,7 +16,8 @@ const FinalReceipt = ({ taxes }) => {
             sum += element.quantity * Number(element.price)
         });
 
-        sum += (taxes.discount / 100 * sum) + (taxes.vat / 100 * sum)
+        sum += (taxes.discount / 100 * sum)
+        sum += (taxes.vat / 100 * sum)
 
         setTotal({ quant: quant, sum: sum })
 
@@ -28,7 +29,7 @@ const FinalReceipt = ({ taxes }) => {
 
     useEffect(() => {
         getTotalResult()
-    }, [selected_product])
+    }, [selected_product, taxes])
 
     return (
         <div className={styles["modal-container"]}>

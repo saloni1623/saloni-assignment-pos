@@ -16,22 +16,41 @@ const ListItem = ({ elem }) => {
 
     // function to increase quantity
     const increaseElem = () => {
-        let prev = selected_product.filter((el) => (el.id == elem.id))[0]
+        let index = 0
+
+        // finding the position of the element
+        let prev = selected_product.filter((el, ind) => {
+            if (el.id === elem.id) {
+                index = ind
+                return true
+            }
+        })[0]
+
         let filterOutData = selected_product.filter((el) => (el.id != elem.id))
 
         prev = { ...prev, ["quantity"]: prev.quantity + 1 }
 
-        dispatch(addProduct([...filterOutData, prev]))
+        filterOutData.splice(index, 0, prev)
+
+        dispatch(addProduct(filterOutData))
     }
 
     // Function to decrease quantity
     const decreaseElem = () => {
-        let prev = selected_product.filter((el) => (el.id == elem.id))[0]
+        let index = 0
+        let prev = selected_product.filter((el, ind) => {
+            if (el.id === elem.id) {
+                index = ind
+                return true
+            }
+        })[0]
+
         let filterOutData = selected_product.filter((el) => (el.id != elem.id))
 
         if (prev.quantity != 1) {
             prev = { ...prev, ["quantity"]: prev.quantity - 1 }
-            dispatch(addProduct([...filterOutData, prev]))
+            filterOutData.splice(index, 0, prev)
+            dispatch(addProduct(filterOutData))
         } else {
             dispatch(addProduct(filterOutData))
         }

@@ -11,8 +11,14 @@ const ProductListing = () => {
 
     // function to add data
     const handleAddProduct = (item) => {
+        let index = 0
         // finding prev stored item
-        let prevData = selected_product.filter((el) => (el.id === item.id))
+        let prevData = selected_product.filter((el, ind) => {
+            if (el.id === item.id) {
+                index = ind
+                return true
+            }
+        })
 
         // block is element is present
         if (prevData.length) {
@@ -24,7 +30,9 @@ const ProductListing = () => {
             // filtering out data without the elemnt
             var arrElem = selected_product.filter((el) => (el.id !== item.id))
 
-            dispatch(addProduct([...arrElem, prev]))
+            arrElem.splice(index, 0, prev)
+
+            dispatch(addProduct(arrElem))
         } else {
             let selItem = item
             selItem.quantity = 1
