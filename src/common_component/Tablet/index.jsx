@@ -17,9 +17,12 @@ const Tablet = ({ item }) => {
 
     return (
         <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={styles['tablet-container']} >
+            {/* Image showing */}
             <img src={image} className={styles['image-style']} />
             <div className={styles['tablet-item-box']}>
                 <div className={styles['tablet-text']}>{name}</div>
+
+                {/* details showing on hover */}
                 {
                     isHovered ?
                         <>
