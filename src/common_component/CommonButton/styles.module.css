@@ -4,7 +4,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f5f5f5
+    background: #f5f5f5;
+    cursor: pointer
 }
 
 .btn-txt {

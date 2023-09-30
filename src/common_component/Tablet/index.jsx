@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './styles.module.css'
 
-const Tablet = ({ item }) => {
+const Tablet = ({ item, handleFunc = () => { } }) => {
     const { image, name, price, description } = item
     const [isHovered, setIsHovered] = React.useState(false);
 
@@ -16,7 +16,7 @@ const Tablet = ({ item }) => {
     };
 
     return (
-        <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={styles['tablet-container']} >
+        <div onClick={() => handleFunc(item)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={styles['tablet-container']} >
             {/* Image showing */}
             <img src={image} className={styles['image-style']} />
             <div className={styles['tablet-item-box']}>
