@@ -16,7 +16,7 @@ const Tablet = ({ item, handleFunc = () => { } }) => {
     };
 
     return (
-        <div onClick={() => handleFunc(item)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={styles['tablet-container']} >
+        <div onClick={() => handleFunc(item)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={styles['tablet-container']}  data-testid="Tablet-component" >
             {/* Image showing */}
             <img src={image} className={styles['image-style']} />
             <div className={styles['tablet-item-box']}>

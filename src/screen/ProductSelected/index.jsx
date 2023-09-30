@@ -29,7 +29,7 @@ const ProductSelected = () => {
     }
 
     return (
-        <div className={styles['selected-list-container']}>
+        <div className={styles['selected-list-container']} data-testid="ProductSelected-component" >
             {/* heading */}
             <TableHead />
 

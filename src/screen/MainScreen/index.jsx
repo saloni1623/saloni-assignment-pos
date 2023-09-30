@@ -5,7 +5,7 @@ import styles from './styles.module.css'
 
 const MainScreen = () => {
     return (
-        <div className={styles['main-container']} >
+        <div className={styles['main-container']} data-testid="MainScreen-component" >
             {/* Product Selected Component */}
             <ProductSelected />
 

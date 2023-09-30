@@ -7,7 +7,7 @@ const ModalComponent = ({ isOpen, onClose = () => { }, children }) => {
     };
 
     return (
-        <div className={styles["modal"]} style={modalStyle}>
+        <div className={styles["modal"]} style={modalStyle} data-testid="ModalComponent" >
             <div className={styles["modal-content"]}>
                 {children}
                 <div className={styles['close-btn-container']}>

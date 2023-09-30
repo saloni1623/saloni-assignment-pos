@@ -28,7 +28,7 @@ const ListItem = ({ elem }) => {
 
         let filterOutData = selected_product.filter((el) => (el.id != elem.id))
 
-        prev = { ...prev, ["quantity"]: prev.quantity + 1 }
+        prev = { ...prev, ["quantity"]: prev?.quantity + 1 }
 
         filterOutData.splice(index, 0, prev)
 
@@ -46,9 +46,8 @@ const ListItem = ({ elem }) => {
         })[0]
 
         let filterOutData = selected_product.filter((el) => (el.id != elem.id))
-
-        if (prev.quantity != 1) {
-            prev = { ...prev, ["quantity"]: prev.quantity - 1 }
+        if (prev?.quantity != 1) {
+            prev = { ...prev, ["quantity"]: prev?.quantity - 1 }
             filterOutData.splice(index, 0, prev)
             dispatch(addProduct(filterOutData))
         } else {
@@ -59,14 +58,14 @@ const ListItem = ({ elem }) => {
 
 
     return (
-        <div className={styles['list-card-container']}>
-            <div onClick={handleDelete} className={styles['delete-box']}>✖</div>
+        <div className={styles['list-card-container']} data-testid="ListItem-component" >
+            <div onClick={handleDelete} className={styles['delete-box']} data-testid="ListItem-cross" >✖</div>
             <div className={styles['name-colm']}>{name}</div>
             <div className={styles['price-colm']}>{price}</div>
             <div className={styles['quant-colm']}>
-                <div className={styles['action-btn-box']} onClick={decreaseElem}>➖</div>
+                <div className={styles['action-btn-box']} onClick={decreaseElem} data-testid="ListItem-minusBtn" >➖</div>
                 <div className={styles['value-box']}>{quantity}</div>
-                <div className={styles['action-btn-box']} onClick={increaseElem}>➕</div>
+                <div className={styles['action-btn-box']} onClick={increaseElem} data-testid="ListItem-plusBtn" >➕</div>
             </div>
             <div className={styles['amount-colm']}>{Number(price) * quantity}</div>
         </div>

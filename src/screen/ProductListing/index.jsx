@@ -25,6 +25,7 @@ const ProductListing = () => {
             let prev = prevData[0]
 
             // increasing the quantity
+            console.log(prev ,)
             prev = { ...prev, ['quantity']: prev.quantity + 1 }
 
             // filtering out data without the elemnt
@@ -41,7 +42,7 @@ const ProductListing = () => {
     }
 
     return (
-        <div className={styles['prod-list-container']}>
+        <div className={styles['prod-list-container']} data-testid="ProductListing-component" >
             <div className={styles['prod-list-row']}>
                 {/* Data Listing */}
                 {
